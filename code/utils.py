@@ -539,9 +539,9 @@ class BranchAndBound():
 
     def extend(self, items):
         self.list.extend(items)
-        lower_value = self.list[0].value()
+        lower_value = self.list[1]
         for i in range(len(self.list)):
-            current_value = self.list[i].value()
+            current_value = self.list[i]
             if current_value <= lower_value:
                 self.list[0] = self.list[i]
                 lower_value = current_value
